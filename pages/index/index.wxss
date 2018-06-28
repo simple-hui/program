@@ -1,0 +1,21 @@
+/**index.wxss**/
+.slide-image {
+  width: 100%;
+}
+.homeContent {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.homeContent view {
+  box-sizing: border-box;
+  width: 33.33%;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 20px;
+  text-align: center;
+  color: #999;
+}
+.homeContent view:nth-child(3n) {
+  border-right: none;
+}
