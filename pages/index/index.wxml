@@ -1,4 +1,7 @@
-<view>
+<view class='homeContent'>
+  <view class='searchContent'>
+    <input type='text' placeholder='好好说话' />
+  </view>
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
@@ -7,9 +10,43 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class='homeContent'>
-    <view wx:for="{{placeList}}" wx:key="{{item}}">
-      <text>{{item}}</text>
+  <view class='titleContent'>
+    <view wx:for="{{titleList}}" wx:key="{{item}}">
+      <image src='{{item.url}}'></image>
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+    </view> 
+  </view>
+  <view class='homeBodyContent'>
+    <view class='homeBodyItem' wx:for="{{placeList}}" wx:key="item">
+      <view class='homeBodyTitle'>
+        <text class='titleWeight'>{{item.title}}</text>
+        <text class='more'>更多 ></text>
+      </view>
+      <view class='homeBodyBody' wx:for="{{item.list}}" wx:for-item="itemchild" wx:key="itemchild">
+        <view class="{{item.type != '0'?'viewList':''}}">
+          <image src='{{itemchild.url}}'></image>
+        </view>
+        <view wx:if="{{ item.type === '0' }}" class="{{item.type != '0'?'viewList':''}}">
+          <view class='itemTitle'>{{itemchild.title}}</view>
+          <view>{{itemchild.littleTitle}}</view>
+          <view class='need'>
+            {{itemchild.need}}
+            <text class='pull-right'>{{itemchild.needPeople}}</text>
+          </view>
+          <view class='prise'>
+            <text>原价￥</text>
+            <text class='priseNum'>{{itemchild.prise}}</text>
+            <text class='pull-right free'>免费领</text>
+          </view>
+        </view>
+        <view wx:else>
+           <view class='itemTitle'>{{itemchild.title}}</view>
+           <view class='littleTitle'>{{itemchild.littleTitle}}</view>
+           <view>2244.6万</view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

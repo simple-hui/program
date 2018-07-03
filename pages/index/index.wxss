@@ -1,21 +1,115 @@
+/*common  */
+.pull-right {
+  float: right;
+}
 /**index.wxss**/
 .slide-image {
   width: 100%;
 }
 .homeContent {
+  background: #e1e1e1;
+}
+.searchContent {
+  padding: 10px;
+  background: #fff;
+}
+.searchContent input {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  font-size: 12px;
+  background: #eee;
+}
+.titleContent {
   display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-}
-.homeContent view {
-  box-sizing: border-box;
-  width: 33.33%;
-  border-right: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
-  padding: 20px;
   text-align: center;
-  color: #999;
+  font-size: 12px;
+  background: #fff;
+  padding: 15rpx;
 }
-.homeContent view:nth-child(3n) {
-  border-right: none;
+.titleContent view {
+  flex: 1;
+  text-align: center;
+}
+.titleContent image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.homeBodyContent {
+  margin-top: 5px;
+}
+.homeBodyContent .homeBodyItem {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px;
+  color: #999;
+  background: #fff;
+}
+.homeBodyContent .homeBodyItem .homeBodyTitle {
+  color: #010101;
+}
+.homeBodyContent .homeBodyItem .homeBodyTitle .titleWeight {
+  font-weight: blod;
+}
+.homeBodyContent .homeBodyItem .homeBodyTitle .more {
+  float: right;
+  font-size: 12px;
+  vertical-align: bottom;
+}
+.homeBodyBody {
+  display: flex;
+  margin-top: 10px;
+}
+.homeBodyBody > view:nth-child(1) {
+  flex: 3;
+}
+.homeBodyBody > view:nth-child(1).viewList {
+  flex: 2;
+}
+.homeBodyBody > view:nth-child(1) image {
+  width: 100%;
+  height: 80%; 
+  border-radius: 2px;
+}
+.homeBodyBody > view:nth-child(2),.homeBodyBody > view:nth-child(3) {
+  flex: 7;
+  font-size: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e1e1e1;
+  padding-left: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.homeBodyBody > view:nth-child(2).viewList {
+  flex: 7;
+}
+.homeBodyBody > view:nth-child(2) .itemTitle {
+  font-size: 16px;
+  color: #010101;
+}
+.littleTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}
+.homeBodyBody > view:nth-child(2) .need {
+  padding-top: 6px;
+  font-size: 10px;
+}
+.prise {
+  font-size: 10px;
+  color: red;
+}
+.prise .priseNum {
+  font-size: 12px;
+}
+.free {
+  padding: 2px 12px;
+  background: #ffcda4;
+  border-radius: 15px;
+  color: #f86f00;
 }
